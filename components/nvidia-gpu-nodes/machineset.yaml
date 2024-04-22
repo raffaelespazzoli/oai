@@ -3,21 +3,21 @@ kind: MachineSet
 metadata:
   labels:
     machine.openshift.io/cluster-api-cluster: ${infrastructure_id} 
-  name: ${infrastructure_id}-worker-us-east-2c 
+  name: ${infrastructure_id}-worker-gpu 
   namespace: openshift-machine-api
 spec:
   replicas: 1
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: ${infrastructure_id} 
-      machine.openshift.io/cluster-api-machineset: ${infrastructure_id}-worker-us-east-2c 
+      machine.openshift.io/cluster-api-machineset: ${infrastructure_id}-worker-gpu 
   template:
     metadata:
       labels:
         machine.openshift.io/cluster-api-cluster: ${infrastructure_id} 
         machine.openshift.io/cluster-api-machine-role: worker 
         machine.openshift.io/cluster-api-machine-type: worker 
-        machine.openshift.io/cluster-api-machineset: ${infrastructure_id}-worker-us-east-2c 
+        machine.openshift.io/cluster-api-machineset: ${infrastructure_id}-worker-gpu 
     spec:
       metadata:
         labels:
