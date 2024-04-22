@@ -2,22 +2,22 @@ apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
   labels:
-    machine.openshift.io/cluster-api-cluster: ${infrastrcture_id} 
-  name: ${infrastrcture_id}-worker-us-east-2c 
+    machine.openshift.io/cluster-api-cluster: ${infrastructure_id} 
+  name: ${infrastructure_id}-worker-us-east-2c 
   namespace: openshift-machine-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: ${infrastrcture_id} 
-      machine.openshift.io/cluster-api-machineset: ${infrastrcture_id}-worker-us-east-2c 
+      machine.openshift.io/cluster-api-cluster: ${infrastructure_id} 
+      machine.openshift.io/cluster-api-machineset: ${infrastructure_id}-worker-us-east-2c 
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: ${infrastrcture_id} 
+        machine.openshift.io/cluster-api-cluster: ${infrastructure_id} 
         machine.openshift.io/cluster-api-machine-role: worker 
         machine.openshift.io/cluster-api-machine-type: worker 
-        machine.openshift.io/cluster-api-machineset: ${infrastrcture_id}-worker-us-east-2c 
+        machine.openshift.io/cluster-api-machineset: ${infrastructure_id}-worker-us-east-2c 
     spec:
       metadata:
         labels:
@@ -36,7 +36,7 @@ spec:
             name: aws-cloud-credentials
           deviceIndex: 0
           iamInstanceProfile:
-            id: ${infrastrcture_id}-worker-profile 
+            id: ${infrastructure_id}-worker-profile 
           instanceType: g4dn.xlarge
           kind: AWSMachineProviderConfig
           placement:
@@ -46,14 +46,14 @@ spec:
             - filters:
                 - name: tag:Name
                   values:
-                    - ${infrastrcture_id}-worker-sg 
+                    - ${infrastructure_id}-worker-sg 
           subnet:
             filters:
               - name: tag:Name
                 values:
-                  - ${infrastrcture_id}-private-us-east-2c 
+                  - ${infrastructure_id}-private-us-east-2c 
           tags:
-            - name: kubernetes.io/cluster/${infrastrcture_id} 
+            - name: kubernetes.io/cluster/${infrastructure_id} 
               value: owned 
           userDataSecret:
             name: worker-user-data
