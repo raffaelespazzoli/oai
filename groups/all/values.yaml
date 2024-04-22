@@ -1,26 +1,4 @@
-default:
-  app:
-    enabled: true
-    enableAutoSync: true
-    autoSyncPrune: false
-    project: cluster-config
-    labels:
-      app-source: group-all
-      repo: cluster-config
-    destination:
-      namespace: openshift-gitops
-      server: https://kubernetes.default.svc
-    source:
-      repoURL: https://github.com/raffaelespazzoli/gitops-std-repo.git
-      targetRevision: HEAD
-    syncOptions:
-    - ApplyOutOfSyncOnly=true
-    - PrunePropagationPolicy=foreground
-    - PruneLast=true
-    - ServerSideApply=true  
-    - FailOnSharedResource=true
-    - RespectIgnoreDifferences=true
-    - CreateNamespace=false      
+   
 
 projects:
 
@@ -31,7 +9,7 @@ projects:
     description: Project for overall cluster configuration
     namespace: openshift-gitops
     sourceRepos:
-    - https://github.com/raffaelespazzoli/gitops-std-repo
+    - ${INFRA_GITOPS_REPO}
     destinations: |
       - namespace: '*'
         server: https://kubernetes.default.svc
@@ -50,3 +28,12 @@ applications:
       namespace: cert-manager
     source:
       path: components/cert-manager-operator
+
+  kube-ops-view:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    destination:
+      namespace: kube-ops-view
+    source:
+      path: components/kube-ops-view       
