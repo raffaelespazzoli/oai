@@ -10,6 +10,15 @@ applications:
     source:
       path: components/nfd-operator
 
+  nfd-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: openshift-nfd
+    source:
+      path: components/nfd-configuration      
+
   nvidia-gpu-operator:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
