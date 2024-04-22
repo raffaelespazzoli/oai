@@ -17,7 +17,25 @@ applications:
     destination:
       namespace: nvidia-gpu-operator
     source:
-      path: components/nvidia-gpu-operator    
+      path: components/nvidia-gpu-operator  
+
+  nvidia-gpu-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    destination:
+      namespace: nvidia-gpu-operator
+    source:
+      path: components/nvidia-gpu-configuration  
+
+  nvidia-gpu-nodes:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: nvidia-gpu-operator
+    source:
+      path: components/nvidia-gpu-nodes           
 
   openshift-ai:
     annotations:
@@ -45,4 +63,7 @@ applications:
       namespace: openshift-operators
     source:
       path: components/openshift-pipelines       
+
+
+
                           

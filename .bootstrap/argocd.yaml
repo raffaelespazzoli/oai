@@ -246,7 +246,9 @@ spec:
           - name: HUB_BASE_DOMAIN
             value: '${cluster_base_domain}'
           - name: INFRA_GITOPS_REPO
-            value: '${gitops_repo}'                                    
+            value: '${gitops_repo}'
+          - name: infrastructure_id
+            value: '${infrastructure_id}'                                                
         # image: quay.io/gnunn/tools:latest
         image: quay.io/raffaelespazzoli/raffa-envsub:latest
         imagePullPolicy: Always
