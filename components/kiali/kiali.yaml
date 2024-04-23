@@ -19,8 +19,6 @@ spec:
   auth:
     strategy: openshift
   deployment:
-    accessible_namespaces:
-      - '*'
     image_pull_policy: ''
     ingress:
       enabled: true
