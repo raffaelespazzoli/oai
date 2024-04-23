@@ -6,9 +6,9 @@ metadata:
 spec:
   #instance: "" # instance is empty by default
   #topologyupdater: false # False by default
-  operand:
-    image: registry.redhat.io/openshift4/ose-node-feature-discovery-rhel9:v4.15
-    imagePullPolicy: Always
+  # operand:
+  #   image: registry.redhat.io/openshift4/ose-node-feature-discovery-rhel9:v4.15
+  #   imagePullPolicy: Always
   workerConfig:
     configData: |
       core:
