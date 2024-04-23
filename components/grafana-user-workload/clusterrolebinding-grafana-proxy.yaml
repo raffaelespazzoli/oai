@@ -8,4 +8,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: grafana-instance-sa
-    namespace: {{ .Release.Namespace }}
+    namespace: istio-system
