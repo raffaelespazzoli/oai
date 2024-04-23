@@ -82,6 +82,15 @@ applications:
     source:
       path: components/openshift-servicemesh
 
+  servicemesh-control-plane:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    destination:
+      namespace: istio-system
+    source:
+      path: components/servicemesh-control-plane      
+
   kiali-operator:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
@@ -89,7 +98,16 @@ applications:
     destination:
       namespace: openshift-operators
     source:
-      path: components/kiali-operator 
+      path: components/kiali-operator
+
+  kiali:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    destination:
+      namespace: istio-system
+    source:
+      path: components/kiali       
 
   tempo-operator:
     annotations:
@@ -107,7 +125,32 @@ applications:
     destination:
       namespace: tempo-stack
     source:
-      path: components/tempo-stack                         
+      path: components/tempo-stack
+
+  namespace-configuration-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: namespace-configuration-operator
+    source:
+      path: components/namespace-configuration-operator
+
+  namespace-configurations:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    source:
+      path: components/namespace-configurations
+
+  user-workload-monitoring:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    source:
+      path: components/user-workload-monitoring                
+
+                              
 
 
 
