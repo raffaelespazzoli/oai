@@ -46,23 +46,23 @@ spec:
       in_cluster_url: 'http://grafana-instance-service.istio-system.svc:3000'
       url: https://user-workload-grafana.apps.${CLUSTER_BASE_DOMAIN}
     istio:
-      config_map_name: default
-      istio_sidecar_injector_config_map_name: istio-sidecar-injector-default
-      istiod_deployment_name: default
-      url_service_version: 'http://default.istio-system:15014/version'
+      config_map_name: istio-data-science-smcp
+      istio_sidecar_injector_config_map_name: istio-sidecar-injector-data-science-smcp
+      istiod_deployment_name: istiod-data-science-smcp
+      url_service_version: 'http://istiod-data-science-smcp.istio-system:15014/version'
     prometheus:
       auth:
         insecure_skip_verify: true
         type: bearer
         use_kiali_token: true
       query_scope:
-        mesh_id: istio-system/default
+        mesh_id: istio-system/data-science-smcp
       url: 'https://thanos-querier.openshift-monitoring.svc.cluster.local:9091'
     tracing:
       query_timeout: 30
       enabled: true
-      in_cluster_url: 'http://tempo-minio-dev-query-frontend.tempo-system.svc.cluster.local:16685'
-      url: https://tempo.apps.${CLUSTER_BASE_DOMAIN}
+      in_cluster_url: 'http://tempo-sample.tempo-stack.svc.cluster.local:4317'
+      url: https://tempo-sample-tempo-stack.apps.${CLUSTER_BASE_DOMAIN}
       use_grpc: true
       # auth:
       #   password: {{ .Values.htpasswd }}
