@@ -41,7 +41,7 @@ spec:
           kind: AWSMachineProviderConfig
           placement:
             availabilityZone: us-east-2c 
-            region: <region> 
+            region: us-east-2 
           securityGroups:
             - filters:
                 - name: tag:Name

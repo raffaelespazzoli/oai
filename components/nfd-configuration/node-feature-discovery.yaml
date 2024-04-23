@@ -73,8 +73,8 @@ spec:
             - "12"
           deviceLabelFields:
             - "class"
-  customConfig:
-    configData: |
-          - name: "more.kernel.features"
-            matchOn:
-            - loadedKMod: ["example_kmod3"]
+  # customConfig:
+  #   configData: |
+  #         - name: "more.kernel.features"
+  #           matchOn:
+  #           - loadedKMod: ["example_kmod3"]
