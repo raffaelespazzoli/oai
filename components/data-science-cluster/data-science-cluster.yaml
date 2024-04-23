@@ -5,16 +5,16 @@ metadata:
 spec:
   components:
     codeflare:
-      managementState: Removed
+      managementState: Managed
     dashboard:
       managementState: Managed
     datasciencepipelines:
-      managementState: Removed
+      managementState: Managed
     kserve:
-      managementState: Removed
+      managementState: Managed
     modelmeshserving:
-      managementState: Removed
+      managementState: Managed
     ray:
-      managementState: Removed
+      managementState: Managed
     workbenches:
       managementState: Managed
