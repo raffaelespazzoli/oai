@@ -155,7 +155,26 @@ applications:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '5'
     source:
-      path: components/user-workload-monitoring                
+      path: components/user-workload-monitoring
+
+  grafana-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: openshift-operators
+    source:
+      path: components/grafana-operator
+
+
+  grafana-user-workload:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    destination:
+      namespace: istio-system
+    source:
+      path: components/grafana-user-workload                           
 
                               
 
