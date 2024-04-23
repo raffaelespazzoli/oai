@@ -5,3 +5,4 @@ namespace: tempo-stack
 resources:
   - ./namespace.yaml
   - ./tempo-stack.yaml
+  - ./link.yaml  
