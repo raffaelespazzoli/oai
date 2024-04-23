@@ -69,7 +69,6 @@ spec:
               name: grafana-proxy
               ports:
                 - containerPort: 9091
-                  protcol: TCP
                   name: https
               resources: 
                 requests:
