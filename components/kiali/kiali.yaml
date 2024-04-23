@@ -61,7 +61,7 @@ spec:
       query_timeout: 30
       enabled: true
       in_cluster_url: 'http://tempo-sample.tempo-stack.svc.cluster.local:4317'
-      url: https://tempo-sample-tempo-stack.apps.${CLUSTER_BASE_DOMAIN}
+      url: https://tempo-sample-jaegerui-tempo-stack.apps.${CLUSTER_BASE_DOMAIN}
       use_grpc: true
       # auth:
       #   password: {{ .Values.htpasswd }}
