@@ -55,6 +55,13 @@ applications:
     source:
       path: components/openshift-ai
 
+  data-science-cluster:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    source:
+      path: components/data-science-cluster      
+
   openshift-serverless:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
