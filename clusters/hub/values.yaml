@@ -71,7 +71,43 @@ applications:
     destination:
       namespace: openshift-operators
     source:
-      path: components/openshift-pipelines       
+      path: components/openshift-pipelines 
+
+  openshift-servicemesh:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: openshift-operators
+    source:
+      path: components/openshift-servicemesh
+
+  kiali-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: openshift-operators
+    source:
+      path: components/kiali-operator 
+
+  tempo-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: openshift-tempo-operator
+    source:
+      path: components/tempo-operator
+
+  tempo-stack:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    destination:
+      namespace: tempo-stack
+    source:
+      path: components/tempo-stack                         
 
 
 

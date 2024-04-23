@@ -1,0 +1,10 @@
+apiVersion: tempo.grafana.com/v1alpha1
+kind: TempoMonolithic
+metadata:
+  name: sample
+  namespace: tempo-stack
+spec:
+  storage:
+    traces:
+      backend: memory
+      size: 2Gi
