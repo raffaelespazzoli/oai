@@ -13,7 +13,7 @@ spec:
     interval: 30s
     relabelings:
     - action: replace
-      replacement: {{ printf "%s/%s" .Values.smcp.namespace .Values.smcp.name }}
+      replacement: istio-system/default
       targetLabel: mesh_id
 ---      
 apiVersion: monitoring.coreos.com/v1
@@ -53,5 +53,5 @@ spec:
       action: replace
       targetLabel: pod_name
     - action: replace
-      replacement: {{ printf "%s/%s" .Values.smcp.namespace .Values.smcp.name }}
+      replacement: istio-system/default
       targetLabel: mesh_id      
