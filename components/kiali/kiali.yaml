@@ -32,9 +32,9 @@ spec:
   #       memory: 256Mi
   #   logger:
   #     log_level: debug
-  # external_services:
-  #   custom_dashboards:
-  #     namespace_label: kubernetes_namespace
+  external_services:
+    custom_dashboards:
+      namespace_label: kubernetes_namespace
     grafana:
       auth:
         password: ciao

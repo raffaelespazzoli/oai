@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: istio-system
 
 resources:
-  - ./jaeger-service.yaml
   - ./namespace.yaml
   - ./network-policies.yaml 
   - ./service-monitor.yaml
