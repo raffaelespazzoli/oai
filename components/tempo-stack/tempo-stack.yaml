@@ -9,7 +9,7 @@ spec:
       backend: memory
       size: 2Gi
   jaegerui:                              # JaegerUI defines the Jaeger UI configuration.
-    enabled: false  
+    enabled: true  
     route:                               # Route defines the OpenShift route configuration for the Jaeger UI.
       enabled: true                     # Enabled defines if a Route object should be created for Jaeger UI.
       annotations: {}                    # Annotations defines the annotations of the Route object.
