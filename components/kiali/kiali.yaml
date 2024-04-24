@@ -43,7 +43,7 @@ spec:
         username: internal
       enabled: true
       in_cluster_url: 'http://grafana-instance-service.istio-system.svc:3000'
-      url: https://user-workload-grafana.apps.${CLUSTER_BASE_DOMAIN}
+      url: https://grafana-instance-route-istio-system.apps.${CLUSTER_BASE_DOMAIN}
     istio:
       config_map_name: istio-data-science-smcp
       istio_sidecar_injector_config_map_name: istio-sidecar-injector-data-science-smcp
