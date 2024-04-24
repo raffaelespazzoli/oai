@@ -1,6 +1,15 @@
       
 applications: 
 
+  oauth-config:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: openshift-config
+    source:
+      path: components/oauth-config
+
   nfd-operator:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
