@@ -1,0 +1,11 @@
+apiVersion: dashboard.opendatahub.io/v1
+kind: AcceleratorProfile
+metadata:
+  name: nvidia
+  namespace: redhat-ods-applications
+spec:
+  description: nvidia
+  displayName: nvidia
+  enabled: true
+  identifier: nvidia.com/gpu
+  tolerations: []
