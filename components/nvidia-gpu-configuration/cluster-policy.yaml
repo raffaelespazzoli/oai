@@ -39,9 +39,9 @@ spec:
     kernelModuleConfig:
       name: ''
   dcgmExporter:
-    enabled: true
     config:
-      name: 'console-plugin-nvidia-gpu'
+      name: ''
+    enabled: true
     serviceMonitor:
       enabled: true
   dcgm:

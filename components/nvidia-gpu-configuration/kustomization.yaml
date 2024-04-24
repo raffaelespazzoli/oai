@@ -4,3 +4,14 @@ kind: Kustomization
 
 resources:
   - ./cluster-policy.yaml
+
+configMapGenerator:
+- name: nvidia-dcgm-exporter-dashboard
+  namespace: openshift-config-managed
+  files:
+    - dcm-exporter-dashboard.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      console.openshift.io/dashboard: "true"
+      console.openshift.io/odc-dashboard: "true"      
