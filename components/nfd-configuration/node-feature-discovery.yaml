@@ -71,7 +71,7 @@ spec:
             - "0200"
             - "03"
             - "12"
-            - "10" #this enables discovering TESLA GPUs
+            - "10de" #this enables discovering TESLA GPUs
           deviceLabelFields:
             - "class"
   # customConfig:
