@@ -65,7 +65,7 @@ spec:
               action: replace
               targetLabel: pod_name
             - action: replace
-              replacement: istio-system/default
+              replacement: istio-system/main
               targetLabel: mesh_id
       excludedPaths:	
         - .metadata	

@@ -13,7 +13,7 @@ spec:
     interval: 30s
     relabelings:
     - action: replace
-      replacement: istio-system/default
+      replacement: istio-system/main
       targetLabel: mesh_id
 ---      
 apiVersion: monitoring.coreos.com/v1
@@ -53,5 +53,5 @@ spec:
       action: replace
       targetLabel: pod_name
     - action: replace
-      replacement: istio-system/default
+      replacement: istio-system/main
       targetLabel: mesh_id      
