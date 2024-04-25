@@ -85,7 +85,16 @@ applications:
     destination:
       namespace: openshift-serverless
     source:
-      path: components/openshift-serverless 
+      path: components/openshift-serverless
+
+  openshift-serverless-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    destination:
+      namespace: knative-serving
+    source:
+      path: components/openshift-serverless-configuration       
 
   openshift-pipelines:
     annotations:
