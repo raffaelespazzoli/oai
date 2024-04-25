@@ -6,5 +6,5 @@ resources:
   - ./namespace.yaml
   - ./network-policies.yaml 
   - ./service-monitor.yaml
-  #- ./smcp.yaml
+  - ./smcp.yaml
   - ./smmr.yaml   

@@ -3,5 +3,4 @@ kind: Namespace
 metadata:
   labels:
     kubernetes.io/metadata.name: istio-system
-    openshift.io/cluster-monitoring: 'true'
   name: istio-system

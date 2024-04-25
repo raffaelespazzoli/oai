@@ -5,4 +5,4 @@ metadata:
 spec:
   memberSelectors: 
     - matchLabels:
-        istio.io/rev: ossm-2.5
+        servicemesh: "true"

@@ -5,7 +5,7 @@ metadata:
 spec:
   labelSelector:
     matchLabels:
-      istio.io/rev: ossm-2.5
+      servicemesh: "true"
   templates:  
     - objectTemplate: |
         apiVersion: networking.k8s.io/v1
@@ -65,7 +65,7 @@ spec:
               action: replace
               targetLabel: pod_name
             - action: replace
-              replacement: istio-system/data-science-smcp
+              replacement: istio-system/default
               targetLabel: mesh_id
       excludedPaths:	
         - .metadata	

@@ -1,0 +1,15 @@
+apiVersion: dscinitialization.opendatahub.io/v1
+kind: DSCInitialization
+metadata:
+  name: default-dsci
+  annotations:
+    argocd.argoproj.io/sync-options: ServerSideApply=true  
+spec:
+ serviceMesh:
+   managementState: Unmanaged
+ components:
+   kserve:
+     managementState: Managed
+     serving:
+       managementState: Unmanaged          
+  
