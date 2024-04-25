@@ -12,6 +12,8 @@ spec:
       managementState: Managed
     kserve:
       managementState: Managed
+      serving:
+        managementState: Unmanaged      
     modelmeshserving:
       managementState: Managed
     ray:
