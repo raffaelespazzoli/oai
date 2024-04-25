@@ -1,7 +1,7 @@
 apiVersion: telemetry.istio.io/v1alpha1
 kind: Telemetry
 metadata:
-  name: data-science-smcp
+  name: default
 spec:
   tracing:
   - providers:

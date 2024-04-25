@@ -40,8 +40,8 @@ spec:
           instanceType: g4dn.xlarge
           kind: AWSMachineProviderConfig
           placement:
-            availabilityZone: us-east-2c 
-            region: us-east-2 
+            availabilityZone: ${region}c 
+            region: ${region} 
           securityGroups:
             - filters:
                 - name: tag:Name
@@ -51,7 +51,7 @@ spec:
             filters:
               - name: tag:Name
                 values:
-                  - ${infrastructure_id}-private-us-east-2c 
+                  - ${infrastructure_id}-private-${region}c 
           tags:
             - name: kubernetes.io/cluster/${infrastructure_id} 
               value: owned 
