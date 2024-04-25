@@ -20,9 +20,7 @@ spec:
       mtls: true
       automtls: true
     controlPlane:
-      mtls: true
-    identity:
-      type: ThirdParty      
+      mtls: true      
   proxy:
     accessLogging:
       file:
