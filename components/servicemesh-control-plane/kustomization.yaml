@@ -7,5 +7,4 @@ resources:
   - ./network-policies.yaml 
   - ./service-monitor.yaml
   #- ./smcp.yaml
-  - ./smmr.yaml
-  - ./telemetry.yaml   
+  - ./smmr.yaml   
