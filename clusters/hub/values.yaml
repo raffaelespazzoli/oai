@@ -71,12 +71,12 @@ applications:
     source:
       path: components/data-science-cluster   
 
-  llm-serving-runtimes:
+  data-science-cluster-configuration:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '25'
     source:
-      path: components/llm-serving-runtimes         
+      path: components/data-science-cluster-configuration         
 
   openshift-serverless:
     annotations:

@@ -5,3 +5,4 @@ resources:
   - ./hf_tgi.yaml
   - ./ollama.yaml
   - ./vllm.yaml
+  - ./accelerator-profile.yaml  

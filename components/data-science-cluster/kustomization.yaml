@@ -3,4 +3,3 @@ kind: Kustomization
 
 resources:
   - ./data-science-cluster.yaml
-  - ./accelerator-profile.yaml
