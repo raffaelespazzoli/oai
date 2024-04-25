@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - ./data-science-cluster.yaml
+  - ./dsc-initialization.yaml
