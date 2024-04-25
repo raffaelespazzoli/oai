@@ -4,7 +4,7 @@ metadata:
   name: default
 spec:
   version: v2.5
-  #mode: ClusterWide
+  mode: ClusterWide
   # Configuring the distributed tracing platform (Tempo)
   meshConfig:
     extensionProviders:
