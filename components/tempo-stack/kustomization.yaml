@@ -9,11 +9,6 @@ resources:
 
 
 helmCharts:
-  - name: gateway
-    releaseName: ingress-gateway
-    namespace: istio-system
-    valuesFile: ingress-gateway-values.yaml
-
   - name: tenant
     repo: https://operator.min.io
     releaseName: tempo
