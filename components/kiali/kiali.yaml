@@ -55,7 +55,7 @@ spec:
         type: bearer
         use_kiali_token: true
       query_scope:
-        mesh_id: istio-system/istio-main
+        mesh_id: istio-system/main
       url: 'https://thanos-querier.openshift-monitoring.svc.cluster.local:9091'
     tracing:
       query_timeout: 30
