@@ -10,5 +10,5 @@ spec:
   port:
     targetPort: https-console
   tls:
-    termination: passthrough
+    termination: edge
   wildcardPolicy: None
