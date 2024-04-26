@@ -8,6 +8,7 @@ resources:
   - ./link.yaml
   - ./rbac.yaml  
   - ./tempo-tenant-route.yaml  
+  - ./tempo-tenant-secret.yaml
 
 
 helmCharts:
