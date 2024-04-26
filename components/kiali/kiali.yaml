@@ -60,8 +60,8 @@ spec:
     tracing:
       query_timeout: 30
       enabled: true
-      in_cluster_url: 'http://tempo-sample.tempo-stack.svc.cluster.local:16685'
-      url: https://tempo-sample-jaegerui-tempo-stack.apps.${CLUSTER_BASE_DOMAIN}
+      in_cluster_url: 'http://tempo-tempo.tempo-stack.svc.cluster.local:16685'
+      url: https://tempo-tempo-jaegerui-tempo-stack.apps.${CLUSTER_BASE_DOMAIN}
       use_grpc: true
       # auth:
       #   password: {{ .Values.htpasswd }}
