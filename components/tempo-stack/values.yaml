@@ -10,15 +10,6 @@ tenant:
     - name: pool-0
       servers: 1
       storageClassName: gp3-csi
-      securityContext:
-        runAsUser: ~
-        runAsGroup: ~
-        fsGroup: ~
-        fsGroupChangePolicy: "OnRootMismatch"
-      containerSecurityContext:
-        runAsUser: ~
-        runAsGroup: ~
-        runAsNonRoot: true
   buckets:
     - name: tempo
       objectLock: false
