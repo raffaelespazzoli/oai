@@ -10,7 +10,7 @@ spec:
     extensionProviders:
       - name: tempo
         zipkin:
-          service: tempo-tempo.tempo-stack.svc.cluster.local
+          service: tempo-tempo-distributor.tempo-stack.svc.cluster.local
           port: 9411
   tracing:
     sampling: 10000
