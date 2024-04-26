@@ -8,7 +8,7 @@ spec:
     name: tempo-console
     weight: 100
   port:
-    targetPort: https-console
+    targetPort: http-console
   tls:
     termination: edge
   wildcardPolicy: None
