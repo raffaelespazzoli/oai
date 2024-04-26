@@ -15,6 +15,5 @@ spec:
   tls:
     termination: reencrypt
     insecureEdgeTerminationPolicy: Redirect
-    destinationCACertificate: ''
   port:
     targetPort: https
