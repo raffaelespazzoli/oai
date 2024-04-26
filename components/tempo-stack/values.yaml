@@ -12,6 +12,7 @@ tenant:
       storageClassName: gp3-csi
   buckets:
     - name: tempo
-      objectLock: false     
+      objectLock: false
+  requestAutoCerts: false         
 
                         
