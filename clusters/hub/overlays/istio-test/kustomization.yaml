@@ -6,3 +6,4 @@ resources:
   - ./namespace.yaml
   - https://raw.githubusercontent.com/Maistra/istio/maistra-2.5/samples/bookinfo/platform/kube/bookinfo.yaml
   - https://raw.githubusercontent.com/Maistra/istio/maistra-2.5/samples/bookinfo/networking/bookinfo-gateway.yaml
+  - https://raw.githubusercontent.com/Maistra/istio/maistra-2.5/samples/bookinfo/networking/destination-rule-all-mtls.yaml
