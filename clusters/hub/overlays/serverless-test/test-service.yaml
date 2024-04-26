@@ -6,7 +6,13 @@ spec:
   template:
     spec:
       containers:
-        - image: quay.io/openshift-knative/showcase 
+        - image: quay.io/openshift-knative/showcase
+          name: user-container	
+          readinessProbe:	
+            successThreshold: 1	
+            tcpSocket:	
+              port: 0	
+          resources: {}         
           env:
             - name: GREET 
               value: Ciao
