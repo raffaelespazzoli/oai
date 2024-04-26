@@ -233,19 +233,19 @@ applications:
     source:
       path: components/otel-configuration
 
-  power-monitoring-operator:
-    annotations:
-      argocd.argoproj.io/compare-options: IgnoreExtraneous
-      argocd.argoproj.io/sync-wave: '5'      
-    source:
-      path: components/power-monitoring-operator
+  # power-monitoring-operator:
+  #   annotations:
+  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
+  #     argocd.argoproj.io/sync-wave: '5'      
+  #   source:
+  #     path: components/power-monitoring-operator
 
-  power-monitoring-configuration:
-    annotations:
-      argocd.argoproj.io/compare-options: IgnoreExtraneous
-      argocd.argoproj.io/sync-wave: '5'      
-    source:
-      path: components/power-monitoring-configuration                                                   
+  # power-monitoring-configuration:
+  #   annotations:
+  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
+  #     argocd.argoproj.io/sync-wave: '5'      
+  #   source:
+  #     path: components/power-monitoring-configuration                                                   
 
 
 
