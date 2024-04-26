@@ -8,10 +8,11 @@ containerSecurityContext:
     drop:
       - ALL
 
+maistraExpose: "true"
 
 service:
   # Type of service. Set to "None" to disable the service entirely
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - name: http2
     protocol: TCP
@@ -25,3 +26,4 @@ service:
   loadBalancerSourceRanges: []
   externalTrafficPolicy: ""
   externalIPs: []
+  maistra.io/expose-route: "true"

@@ -19,6 +19,7 @@ helm.sh/chart: {{ include "gateway.chart" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
+maistra.io/expose-route: "{{ .Values.maistraExpose }}"
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 app.kubernetes.io/name: {{ include "gateway.name" . }}
 {{- range $key, $val := .Values.labels }}
