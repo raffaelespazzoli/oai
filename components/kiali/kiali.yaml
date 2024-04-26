@@ -45,10 +45,10 @@ spec:
       in_cluster_url: 'http://grafana-instance-service.istio-system.svc:3000'
       url: https://grafana-instance-route-istio-system.apps.${CLUSTER_BASE_DOMAIN}
     istio:
-      config_map_name: istio-data-science-smcp
-      istio_sidecar_injector_config_map_name: istio-sidecar-injector-data-science-smcp
-      istiod_deployment_name: istiod-data-science-smcp
-      url_service_version: 'http://istiod-data-science-smcp.istio-system:15014/version'
+      config_map_name: istio-main
+      istio_sidecar_injector_config_map_name: istio-sidecar-injector-main
+      istiod_deployment_name: istiod-main
+      url_service_version: 'http://istiod-main.istio-system:15014/version'
     prometheus:
       auth:
         insecure_skip_verify: true
