@@ -11,4 +11,5 @@ helmGlobals:
 helmCharts:
   - name: gateway
     releaseName: ingress-gateway
-    namespace: istio-system  
+    namespace: istio-system
+    valuesFile: ingress-gateway-values.yaml
