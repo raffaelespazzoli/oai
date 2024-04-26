@@ -3,6 +3,9 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "maistraExpose": {
+      "type": "string"
+    },
     "global": {
       "type": "object"
     },
