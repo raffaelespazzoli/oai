@@ -1,5 +1,0 @@
-s3:
-  deletion:
-    bucket: true
-  endpointUrl: 
-  existingSecret:      

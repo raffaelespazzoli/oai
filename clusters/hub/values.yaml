@@ -213,7 +213,39 @@ applications:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '5'      
     source:
-      path: components/minio-operator                                 
+      path: components/minio-operator      
+
+  otel-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: openshift-opentelemetry-operator      
+    source:
+      path: components/otel-operator
+
+  otel-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    destination:
+      namespace: otel-collector            
+    source:
+      path: components/otel-configuration
+
+  power-monitoring-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'      
+    source:
+      path: components/power-monitoring-operator
+
+  power-monitoring-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'      
+    source:
+      path: components/power-monitoring-configuration                                                   
 
 
 
