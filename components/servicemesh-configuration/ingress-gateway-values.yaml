@@ -26,4 +26,4 @@ service:
   loadBalancerSourceRanges: []
   externalTrafficPolicy: ""
   externalIPs: []
-  maistra.io/expose-route: "true"
+  #maistra.io/expose-route: "true"

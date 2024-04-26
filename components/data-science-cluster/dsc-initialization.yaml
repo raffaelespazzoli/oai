@@ -5,6 +5,10 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: ServerSideApply=true  
 spec:
- serviceMesh:
-   managementState: Unmanaged          
+  applicationsNamespace: redhat-ods-applications
+  serviceMesh:
+    managementState: Unmanaged
+  trustedCABundle:
+    managementState: Managed 
+    customCABundle: ""
   
