@@ -30,7 +30,7 @@ app.kubernetes.io/name: {{ include "gateway.name" . }}
 
 {{- define "gateway.podLabels" -}}
 {{ include "gateway.selectorLabels" . }}
-maistra.io/expose-route: {{ .Values.maistraExpose }}
+maistra.io/expose-route: {{ .Values.maistraExpose | quote }}
 {{- range $key, $val := .Values.labels }}
 {{- if not (or (eq $key "app") (eq $key "istio")) }}
 {{ $key | quote }}: {{ $val | quote }}
