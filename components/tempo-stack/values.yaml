@@ -13,6 +13,6 @@ tenant:
   buckets:
     - name: tempo
       objectLock: false
-  requestAutoCerts: false         
+requestAutoCert: false         
 
                         
