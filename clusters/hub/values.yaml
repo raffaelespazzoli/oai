@@ -210,7 +210,37 @@ applications:
     source:
       path: components/grafana-user-workload                           
 
-                              
+
+
+### Tests
+
+  istio-test:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '25'
+    destination:
+      namespace: istio-test      
+    source:
+      path: overlays/istio-test
+
+
+  notebook-test:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '25'
+    destination:
+      namespace: notebook-test     
+    source:
+      path: overlays/notebook-test
+
+  serverless-test:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '25'
+    destination:
+      namespace: serverless-test     
+    source:
+      path: overlays/serverless-test
 
 
 

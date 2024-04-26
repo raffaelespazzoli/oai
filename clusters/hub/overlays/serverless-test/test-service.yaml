@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: showcase 
+spec:
+  template:
+    spec:
+      containers:
+        - image: quay.io/openshift-knative/showcase 
+          env:
+            - name: GREET 
+              value: Ciao

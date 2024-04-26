@@ -4,3 +4,11 @@ namespace: istio-system
 
 resources:
   - ./telemetry.yaml   
+
+helmGlobals:
+  chartHome: ../../.helm/charts
+
+helmCharts:
+  - name: gateway
+    releaseName: ingress-gateway
+    namespace: istio-system  
