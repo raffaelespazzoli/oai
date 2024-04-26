@@ -226,7 +226,7 @@ applications:
     destination:
       namespace: istio-test      
     source:
-      path: cluster/hub/overlays/istio-test
+      path: clusters/hub/overlays/istio-test
 
 
   notebook-test:
@@ -236,7 +236,7 @@ applications:
     destination:
       namespace: notebook-test     
     source:
-      path: cluster/hub/overlays/notebook-test
+      path: clusters/hub/overlays/notebook-test
 
   serverless-test:
     annotations:
@@ -245,7 +245,7 @@ applications:
     destination:
       namespace: serverless-test     
     source:
-      path: cluster/hub/overlays/serverless-test
+      path: clusters/hub/overlays/serverless-test
 
 
 
