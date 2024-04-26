@@ -1,7 +1,7 @@
 secrets:
   name: tempo-env-configuration
   accessKey: tempo 
-  secretKey: tempo
+  secretKey: tempotempo
 tenant:
   configuration:
     name: tempo-env-configuration
