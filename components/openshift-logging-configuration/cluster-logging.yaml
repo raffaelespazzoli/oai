@@ -14,7 +14,7 @@ spec:
     resources: {}
     tolerations: []
   visualization:
-    type: ocpConsole
+    type: ocp-console
     ocpConsole: 
       logsLimit: 100
       timeout: "60"          
