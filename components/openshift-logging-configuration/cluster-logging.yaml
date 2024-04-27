@@ -16,5 +16,5 @@ spec:
   visualization:
     type: ocpConsole
     ocpConsole: 
-      logsLimit: {}
-      timeout: {}          
+      logsLimit: 100
+      timeout: 60          
