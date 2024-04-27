@@ -12,7 +12,7 @@ spec:
     secret:
       name: logging-loki-s3 
       type: s3 
-      credentialMode: 
+      credentialMode: static
   storageClassName: gp3-csi
   tenants:
     mode: openshift-logging
