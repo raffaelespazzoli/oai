@@ -5,7 +5,8 @@ namespace: openshift-logging
 resources:
   - ./secret.yaml
   - ./loki.yaml  
-  - ./loki-tenant-route.yaml  
+  - ./loki-tenant-route.yaml
+  - ./rbac.yaml
 
 
 helmCharts:
