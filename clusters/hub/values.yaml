@@ -111,7 +111,7 @@ applications:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '5'
     destination:
-      namespace: openshift-operators
+      namespace: openshift-pipelines-operator
     source:
       path: components/openshift-pipelines 
 
@@ -122,7 +122,7 @@ applications:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '5'
     destination:
-      namespace: openshift-operators
+      namespace: openshift-servicemesh-operator
     source:
       path: components/openshift-servicemesh
 
@@ -149,7 +149,7 @@ applications:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '5'
     destination:
-      namespace: openshift-operators
+      namespace: openshift-kiali-operator
     source:
       path: components/kiali-operator
 
@@ -194,7 +194,7 @@ applications:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '5'
     destination:
-      namespace: openshift-operators
+      namespace: openshift-grafana-operator
     source:
       path: components/grafana-operator
 
@@ -210,7 +210,9 @@ applications:
   minio-operator:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
-      argocd.argoproj.io/sync-wave: '5'      
+      argocd.argoproj.io/sync-wave: '5' 
+    destination:
+      namespace: openshift-minio-operator           
     source:
       path: components/minio-operator      
 
