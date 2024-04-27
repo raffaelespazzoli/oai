@@ -15,6 +15,7 @@ secretGenerator:
 resources:
   - ./oauth.yaml
   - ./admin-role-binding.yaml
+  - ./olm-patch.yaml
 
 generatorOptions:
  disableNameSuffixHash: true  
