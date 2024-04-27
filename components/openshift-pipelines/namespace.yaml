@@ -4,4 +4,5 @@ metadata:
   labels:
     kubernetes.io/metadata.name: openshift-pipelines-operator
     openshift.io/cluster-monitoring: "true"
+    argocd.argoproj.io/managed-by: openshift-gitops
   name: openshift-pipelines-operator

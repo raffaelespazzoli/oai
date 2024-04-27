@@ -214,7 +214,43 @@ applications:
     destination:
       namespace: openshift-minio-operator           
     source:
-      path: components/minio-operator      
+      path: components/minio-operator 
+
+  loki-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5' 
+    destination:
+      namespace: openshift-loki-operator           
+    source:
+      path: components/loki-operator
+
+  loki-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15' 
+    destination:
+      namespace: openshift-logging           
+    source:
+      path: components/loki-configuration
+
+  openshift-logging-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5' 
+    destination:
+      namespace: openshift-logging           
+    source:
+      path: components/openshift-logging-operator     
+
+  openshift-logging-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15' 
+    destination:
+      namespace: openshift-logging           
+    source:
+      path: components/openshift-logging-configuration                     
 
   # otel-operator:
   #   annotations:

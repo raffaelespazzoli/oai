@@ -3,4 +3,5 @@ kind: Namespace
 metadata:
   labels:
     kubernetes.io/metadata.name: otel-collector
+    argocd.argoproj.io/managed-by: openshift-gitops
   name: otel-collector

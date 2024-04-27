@@ -4,4 +4,5 @@ metadata:
   labels:
     kubernetes.io/metadata.name: openshift-tempo-operator
     openshift.io/cluster-monitoring: 'true'
+    argocd.argoproj.io/managed-by: openshift-gitops
   name: openshift-tempo-operator
