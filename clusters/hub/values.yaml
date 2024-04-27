@@ -1,6 +1,8 @@
       
 applications: 
 
+# openshift configurations
+
   openshift-config:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
@@ -9,6 +11,8 @@ applications:
       namespace: openshift-config
     source:
       path: components/openshift-config
+
+## NFD
 
   nfd-operator:
     annotations:
@@ -27,6 +31,8 @@ applications:
       namespace: openshift-nfd
     source:
       path: components/nfd-configuration      
+
+# NVIDIA GPU
 
   nvidia-gpu-operator:
     annotations:
@@ -55,6 +61,8 @@ applications:
     source:
       path: components/nvidia-gpu-nodes           
 
+# OpenShift AI
+
   # openshift-ai:
   #   annotations:
   #     argocd.argoproj.io/compare-options: IgnoreExtraneous
@@ -78,6 +86,8 @@ applications:
   #   source:
   #     path: components/data-science-cluster-configuration         
 
+# OpenShift Serverless
+
   openshift-serverless:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
@@ -92,7 +102,9 @@ applications:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '15'
     source:
-      path: components/openshift-serverless-configuration       
+      path: components/openshift-serverless-configuration  
+
+# OpenShiftt pipelines           
 
   openshift-pipelines:
     annotations:
@@ -102,6 +114,8 @@ applications:
       namespace: openshift-operators
     source:
       path: components/openshift-pipelines 
+
+# OpenShift ServiceMesh
 
   openshift-servicemesh:
     annotations:
@@ -146,7 +160,9 @@ applications:
     destination:
       namespace: istio-system
     source:
-      path: components/kiali       
+      path: components/kiali  
+
+# Observability           
 
   tempo-operator:
     annotations:
@@ -166,22 +182,6 @@ applications:
     source:
       path: components/tempo-stack
 
-  namespace-configuration-operator:
-    annotations:
-      argocd.argoproj.io/compare-options: IgnoreExtraneous
-      argocd.argoproj.io/sync-wave: '5'
-    destination:
-      namespace: namespace-configuration-operator
-    source:
-      path: components/namespace-configuration-operator
-
-  namespace-configurations:
-    annotations:
-      argocd.argoproj.io/compare-options: IgnoreExtraneous
-      argocd.argoproj.io/sync-wave: '15'
-    source:
-      path: components/namespace-configurations
-
   user-workload-monitoring:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
@@ -197,7 +197,6 @@ applications:
       namespace: openshift-operators
     source:
       path: components/grafana-operator
-
 
   grafana-user-workload:
     annotations:
@@ -215,23 +214,23 @@ applications:
     source:
       path: components/minio-operator      
 
-  otel-operator:
-    annotations:
-      argocd.argoproj.io/compare-options: IgnoreExtraneous
-      argocd.argoproj.io/sync-wave: '5'
-    destination:
-      namespace: openshift-opentelemetry-operator      
-    source:
-      path: components/otel-operator
+  # otel-operator:
+  #   annotations:
+  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
+  #     argocd.argoproj.io/sync-wave: '5'
+  #   destination:
+  #     namespace: openshift-opentelemetry-operator      
+  #   source:
+  #     path: components/otel-operator
 
-  otel-configuration:
-    annotations:
-      argocd.argoproj.io/compare-options: IgnoreExtraneous
-      argocd.argoproj.io/sync-wave: '15'
-    destination:
-      namespace: otel-collector            
-    source:
-      path: components/otel-configuration
+  # otel-configuration:
+  #   annotations:
+  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
+  #     argocd.argoproj.io/sync-wave: '15'
+  #   destination:
+  #     namespace: otel-collector            
+  #   source:
+  #     path: components/otel-configuration
 
   # power-monitoring-operator:
   #   annotations:
@@ -245,7 +244,25 @@ applications:
   #     argocd.argoproj.io/compare-options: IgnoreExtraneous
   #     argocd.argoproj.io/sync-wave: '5'      
   #   source:
-  #     path: components/power-monitoring-configuration                                                   
+  #     path: components/power-monitoring-configuration       
+
+# Multitenancy
+
+  namespace-configuration-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: namespace-configuration-operator
+    source:
+      path: components/namespace-configuration-operator
+
+  namespace-configurations:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    source:
+      path: components/namespace-configurations
 
 
 
