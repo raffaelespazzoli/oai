@@ -12,9 +12,9 @@ spec:
   collection:
     type: vector 
     resources: {}
-    tolerations: {}
+    tolerations: []
   visualization:
     type: ocpConsole
     ocpConsole: 
       logsLimit: 100
-      timeout: 60          
+      timeout: "60"          
