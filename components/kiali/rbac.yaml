@@ -1,30 +1,3 @@
-kind: ClusterRoleBinding
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: kiali-prometheus-monitoring-exporter-istio-system
-subjects:
-  - kind: ServiceAccount
-    name: kiali-service-account
-    namespace: istio-system
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: prometheus-monitoring-exporter-istio-system
----
-kind: ClusterRole
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: prometheus-monitoring-exporter-istio-system
-rules:
-  - verbs:
-      - get
-      - list
-      - watch
-    apiGroups:
-      - ''
-    resources:
-      - namespaces
----
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
