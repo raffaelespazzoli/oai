@@ -13,4 +13,3 @@ spec:
   tls:
     termination: reencrypt
     insecureEdgeTerminationPolicy: Redirect
-  wildcardPolicy: Subdomain
