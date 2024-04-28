@@ -6,7 +6,7 @@ spec:
   host: bookinfo.apps.${CLUSTER_BASE_DOMAIN}
   to:
     kind: Service
-    name: istio-test-ingressgateway
+    name: bookinfo-ingressgateway
     weight: 100
   port:
     targetPort: https
