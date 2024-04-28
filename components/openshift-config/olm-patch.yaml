@@ -2,7 +2,7 @@ apiVersion: operators.coreos.com/v1
 kind: OLMConfig
 metadata:
   annotations:
-    argocd.argoproj.io/sync-options: ServerSideApply=true
+    argocd.argoproj.io/sync-options: Delete=false,ServerSideApply=true
   name: cluster
 spec:
   features:

@@ -5,7 +5,6 @@ namespace: openshift-config
 
 commonAnnotations:
   argocd.argoproj.io/compare-options: IgnoreExtraneous
-  argocd.argoproj.io/sync-options: Delete=false
 
 secretGenerator:
 - name: htpass-secret
