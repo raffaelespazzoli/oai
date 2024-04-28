@@ -2,8 +2,20 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: istio-test
 
+helmGlobals:
+  chartHome: ../../../../.helm/charts
+
+helmCharts:
+  - name: gateway
+    releaseName: bookinfo-ingressgateway
+    namespace: istio-test
+    valuesFile: ingress-gateway-values.yaml
+
 resources:
   - ./namespace.yaml
+  - ./ingress-route.yaml
+  - ./gateway.yaml
+  - ./virtual-service.yaml
   - https://raw.githubusercontent.com/Maistra/istio/maistra-2.5/samples/bookinfo/platform/kube/bookinfo.yaml
-  - https://raw.githubusercontent.com/Maistra/istio/maistra-2.5/samples/bookinfo/networking/bookinfo-gateway.yaml
+  #- https://raw.githubusercontent.com/Maistra/istio/maistra-2.5/samples/bookinfo/networking/bookinfo-gateway.yaml
   - https://raw.githubusercontent.com/Maistra/istio/maistra-2.5/samples/bookinfo/networking/destination-rule-all-mtls.yaml

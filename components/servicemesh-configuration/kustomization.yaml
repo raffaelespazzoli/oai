@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: istio-system
 
 resources:
-  - ./telemetry.yaml   
+  - ./telemetry.yaml  
 
 helmGlobals:
   chartHome: ../../.helm/charts

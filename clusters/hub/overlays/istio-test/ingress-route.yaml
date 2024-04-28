@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: istio-test
+spec:
+  host: bookinfo.apps.${CLUSTER_BASE_DOMAIN}
+  to:
+    kind: Service
+    name: istio-test-ingressgateway
+    weight: 100
+  port:
+    targetPort: https
+  tls:
+    termination: reencrypt
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: Subdomain
