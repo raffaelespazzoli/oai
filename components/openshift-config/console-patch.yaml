@@ -7,3 +7,4 @@ metadata:
 spec:
   plugins:
   - logging-view-plugin
+  - monitoring-plugin
