@@ -9,7 +9,7 @@ spec:
     name: bookinfo-ingressgateway
     weight: 100
   port:
-    targetPort: 8443
+    targetPort: https
   tls:
     termination: reencrypt
     insecureEdgeTerminationPolicy: Redirect
