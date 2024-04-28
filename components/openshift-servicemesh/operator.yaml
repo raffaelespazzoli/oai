@@ -11,7 +11,8 @@ metadata:
   name: servicemesh-operator
 spec:
   channel: stable
-  installPlanApproval: Automatic
+  installPlanApproval: Manual
   name: servicemeshoperator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
+  startingCSV: servicemeshoperator.v2.5.0
