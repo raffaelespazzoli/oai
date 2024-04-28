@@ -13,7 +13,7 @@ spec:
       name: https
       protocol: HTTPS
     hosts:
-    - "istio-test/bookinfo.apps.${CLUSTER_BASE_DOMAIN}"
+    - "bookinfo.apps.${CLUSTER_BASE_DOMAIN}"
     tls:
       mode: SIMPLE # enables HTTPS on this port
       credentialName: ingress-gateway-tls # fetches certs from Kubernetes secret
