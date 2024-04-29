@@ -21,7 +21,9 @@ export infrastructure_id=$(oc get infrastructure cluster -o jsonpath='{.status.i
 export region=$(oc get infrastructure cluster -o jsonpath='{.status.platformStatus.aws.region}')
 oc apply -f .bootstrap/subscription.yaml
 oc apply -f .bootstrap/cluster-rolebinding.yaml
+sleep 60
 envsubst < .bootstrap/argocd.yaml | oc apply -f -
+sleep 30
 envsubst < .bootstrap/root-application.yaml | oc apply -f -
 ```
 
