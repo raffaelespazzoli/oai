@@ -4,3 +4,4 @@ kind: Kustomization
 namespace: netobserv
 resources:
   - ./namespace.yaml
+  - ./flow-collector.yaml
