@@ -8,3 +8,5 @@ spec:
   plugins:
   - logging-view-plugin
   - monitoring-plugin
+  - gitops-plugin
+  - pipelines-console-plugin
