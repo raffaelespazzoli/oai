@@ -23,7 +23,7 @@ spec:
       cacheMaxFlows: 400
       clusterNetworkOperator:
         namespace: openshift-network-operator
-      forceSampleAll: false
+      #forceSampleAll: false
       ovnKubernetes:
         containerName: ovnkube-node
         daemonSetName: ovnkube-node
@@ -32,9 +32,9 @@ spec:
     type: eBPF
   consolePlugin:
     logLevel: info
-    advanced:
-      port: 9001
-      register: true
+    # advanced:
+    #   port: 9001
+    #   register: true
     enable: true
     portNaming:
       enable: true
@@ -67,59 +67,59 @@ spec:
       enable: false
       insecureSkipVerify: false
   loki:
-    advanced:
-      writeMaxBackoff: 5s
-      writeMaxRetries: 2
-      writeMinBackoff: 1s
+    # advanced:
+    #   writeMaxBackoff: 5s
+    #   writeMaxRetries: 2
+    #   writeMinBackoff: 1s
     writeTimeout: 10s
     microservices:
       ingesterUrl: 'http://loki-distributor:3100/'
       querierUrl: 'http://loki-query-frontend:3100/'
       tenantID: netobserv
-      tls:
-        enable: false
-        insecureSkipVerify: false
+      # tls:
+      #   enable: false
+      #   insecureSkipVerify: false
     enable: true
     mode: LokiStack
     manual:
       authToken: Disabled
       ingesterUrl: 'http://loki:3100/'
       querierUrl: 'http://loki:3100/'
-      statusTls:
-        enable: false
-        insecureSkipVerify: false
+      # statusTls:
+      #   enable: false
+      #   insecureSkipVerify: false
       tenantID: netobserv
-      tls:
-        enable: false
-        insecureSkipVerify: false
+      # tls:
+      #   enable: false
+      #   insecureSkipVerify: false
     lokiStack:
       name: netobserv-loki
     readTimeout: 30s
     monolithic:
       tenantID: netobserv
-      tls:
-        enable: false
-        insecureSkipVerify: false
+      # tls:
+      #   enable: false
+      #   insecureSkipVerify: false
       url: 'http://loki:3100/'
     writeBatchWait: 1s
     writeBatchSize: 102400
   namespace: netobserv
   processor:
     logLevel: info
-    advanced:
-      port: 2055
-      conversationTerminatingTimeout: 5s
-      conversationEndTimeout: 10s
-      profilePort: 6060
-      enableKubeProbes: true
-      healthPort: 8080
-      dropUnusedFields: true
-      conversationHeartbeatInterval: 30s
+    # advanced:
+    #   port: 2055
+    #   conversationTerminatingTimeout: 5s
+    #   conversationEndTimeout: 10s
+    #   profilePort: 6060
+    #   enableKubeProbes: true
+    #   healthPort: 8080
+    #   dropUnusedFields: true
+    #   conversationHeartbeatInterval: 30s
     metrics:
       server:
         port: 9102
         tls:
-          insecureSkipVerify: false
+          # insecureSkipVerify: false
           type: Disabled
     multiClusterDeployment: false
     kafkaConsumerQueueCapacity: 1000
