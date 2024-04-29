@@ -268,7 +268,16 @@ applications:
     destination:
       namespace: netobserv         
     source:
-      path: components/openshift-netobserv-configuration                              
+      path: components/openshift-netobserv-configuration
+
+  loki-netobserv-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15' 
+    destination:
+      namespace: netobserv           
+    source:
+      path: components/loki-netobserv-configuration                                    
 
   # otel-operator:
   #   annotations:
