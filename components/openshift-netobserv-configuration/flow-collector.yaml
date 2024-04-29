@@ -63,9 +63,9 @@ spec:
   kafka:
     sasl:
       type: Disabled
-    tls:
-      enable: false
-      insecureSkipVerify: false
+    # tls:
+    #   enable: false
+    #   insecureSkipVerify: false
   loki:
     # advanced:
     #   writeMaxBackoff: 5s
