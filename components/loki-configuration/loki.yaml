@@ -2,7 +2,6 @@ apiVersion: loki.grafana.com/v1
 kind: LokiStack
 metadata:
   name: logging-loki 
-  namespace: openshift-logging
 spec:
   size: 1x.small 
   storage:
@@ -16,3 +15,7 @@ spec:
   storageClassName: gp3-csi
   tenants:
     mode: openshift-logging
+  limits:
+    global: 
+      retention: 
+        days: 2    

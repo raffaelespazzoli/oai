@@ -9,6 +9,13 @@ spec:
     type: lokistack
     lokistack:
       name: logging-loki
+    retentionPolicy: 
+      application:
+        maxAge: 1d
+      infra:
+        maxAge: 1d
+      audit:
+        maxAge: 1d      
   collection:
     type: vector 
     resources: {}
