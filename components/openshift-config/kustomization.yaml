@@ -16,6 +16,7 @@ resources:
   - ./admin-role-binding.yaml
   - ./olm-patch.yaml
   - ./console-patch.yaml
+  - ./admin-group.yaml
 
 generatorOptions:
  disableNameSuffixHash: true  

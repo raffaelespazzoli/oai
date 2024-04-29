@@ -1,7 +1,7 @@
 apiVersion: loki.grafana.com/v1
 kind: LokiStack
 metadata:
-  name: logging-loki 
+  name: netobserv-loki 
 spec:
   size: 1x.small 
   storage:
@@ -11,14 +11,22 @@ spec:
     secret:
       name: logging-loki-s3 
       type: s3 
-      #credentialMode: static
+      credentialMode: static
   storageClassName: gp3-csi
   tenants:
     mode: openshift-logging
   limits:
     global: 
       retention: 
-        days: 2 
+        days: 2
+      ingestion:
+        ingestionBurstSize: 40
+        ingestionRate: 20
+        maxGlobalStreamsPerTenant: 25000
+      queries:
+        maxChunksPerQuery: 2000000
+        maxEntriesLimitPerQuery: 10000
+        maxQuerySeries: 3000         
   hashRing:
     type: memberlist
     memberlist:

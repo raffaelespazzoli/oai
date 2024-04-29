@@ -225,14 +225,14 @@ applications:
     source:
       path: components/loki-operator
 
-  loki-configuration:
+  loki-logging-configuration:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '15' 
     destination:
       namespace: openshift-logging           
     source:
-      path: components/loki-configuration
+      path: components/loki-logging-configuration
 
   openshift-logging-operator:
     annotations:
@@ -250,7 +250,25 @@ applications:
     destination:
       namespace: openshift-logging           
     source:
-      path: components/openshift-logging-configuration                     
+      path: components/openshift-logging-configuration  
+
+  openshift-netobserv-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5' 
+    destination:
+      namespace: openshift-netobserv-operator          
+    source:
+      path: components/openshift-netobserv-operator
+
+  openshift-netobserv-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5' 
+    destination:
+      namespace: netobserv         
+    source:
+      path: components/openshift-netobserv-configuration                              
 
   # otel-operator:
   #   annotations:
