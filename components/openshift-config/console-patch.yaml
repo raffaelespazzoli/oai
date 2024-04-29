@@ -10,3 +10,4 @@ spec:
   - monitoring-plugin
   - gitops-plugin
   - pipelines-console-plugin
+  - netobserv-plugin
