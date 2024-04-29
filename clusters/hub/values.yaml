@@ -216,68 +216,68 @@ applications:
     source:
       path: components/minio-operator 
 
-  # loki-operator:
-  #   annotations:
-  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  #     argocd.argoproj.io/sync-wave: '5' 
-  #   destination:
-  #     namespace: openshift-loki-operator           
-  #   source:
-  #     path: components/loki-operator
+  loki-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5' 
+    destination:
+      namespace: openshift-loki-operator           
+    source:
+      path: components/loki-operator
 
-  # loki-logging-configuration:
-  #   annotations:
-  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  #     argocd.argoproj.io/sync-wave: '15' 
-  #   destination:
-  #     namespace: openshift-logging           
-  #   source:
-  #     path: components/loki-logging-configuration
+  loki-logging-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15' 
+    destination:
+      namespace: openshift-logging           
+    source:
+      path: components/loki-logging-configuration
 
-  # openshift-logging-operator:
-  #   annotations:
-  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  #     argocd.argoproj.io/sync-wave: '5' 
-  #   destination:
-  #     namespace: openshift-logging           
-  #   source:
-  #     path: components/openshift-logging-operator     
+  openshift-logging-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5' 
+    destination:
+      namespace: openshift-logging           
+    source:
+      path: components/openshift-logging-operator     
 
-  # openshift-logging-configuration:
-  #   annotations:
-  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  #     argocd.argoproj.io/sync-wave: '15' 
-  #   destination:
-  #     namespace: openshift-logging           
-  #   source:
-  #     path: components/openshift-logging-configuration  
+  openshift-logging-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15' 
+    destination:
+      namespace: openshift-logging           
+    source:
+      path: components/openshift-logging-configuration  
 
-  # openshift-netobserv-operator:
-  #   annotations:
-  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  #     argocd.argoproj.io/sync-wave: '5' 
-  #   destination:
-  #     namespace: openshift-netobserv-operator          
-  #   source:
-  #     path: components/openshift-netobserv-operator
+  openshift-netobserv-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5' 
+    destination:
+      namespace: openshift-netobserv-operator          
+    source:
+      path: components/openshift-netobserv-operator
 
-  # openshift-netobserv-configuration:
-  #   annotations:
-  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  #     argocd.argoproj.io/sync-wave: '5' 
-  #   destination:
-  #     namespace: netobserv         
-  #   source:
-  #     path: components/openshift-netobserv-configuration
+  openshift-netobserv-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5' 
+    destination:
+      namespace: netobserv         
+    source:
+      path: components/openshift-netobserv-configuration
 
-  # loki-netobserv-configuration:
-  #   annotations:
-  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  #     argocd.argoproj.io/sync-wave: '15' 
-  #   destination:
-  #     namespace: netobserv           
-  #   source:
-  #     path: components/loki-netobserv-configuration                                    
+  loki-netobserv-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15' 
+    destination:
+      namespace: netobserv           
+    source:
+      path: components/loki-netobserv-configuration                                    
 
   # otel-operator:
   #   annotations:
