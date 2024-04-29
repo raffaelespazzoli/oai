@@ -9,4 +9,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: loki-sa
-  namespace: openshift-logging
+  namespace: netobserv
