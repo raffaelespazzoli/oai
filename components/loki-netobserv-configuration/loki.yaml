@@ -14,7 +14,7 @@ spec:
       credentialMode: static
   storageClassName: gp3-csi
   tenants:
-    mode: openshift-logging
+    mode: openshift-network
   limits:
     global: 
       retention: 
