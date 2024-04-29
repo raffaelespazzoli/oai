@@ -9,7 +9,8 @@ spec:
     istio: bookinfo-ingressgateway # use istio default controller
   servers:
   - port:
-      number: 8443
+      #number: 8443
+      number: 443
       name: https
       protocol: HTTPS
     hosts:
