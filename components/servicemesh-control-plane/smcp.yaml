@@ -9,9 +9,13 @@ spec:
   meshConfig:
     extensionProviders:
       - name: tempo
-        zipkin:
+        # zipkin:
+        #   service: tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
+        #   port: 9411
+        opentelemetry:
           service: tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
-          port: 9411
+          port: 9411        
+
   tracing:
     sampling: 10000
     type: None
