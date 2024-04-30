@@ -14,7 +14,7 @@ spec:
         #   port: 9411
         opentelemetry:
           service: tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
-          port: 9411        
+          port: 4317        
 
   tracing:
     sampling: 10000
