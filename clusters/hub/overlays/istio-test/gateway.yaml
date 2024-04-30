@@ -7,14 +7,14 @@ spec:
   # If you installed Istio using Helm following the standard documentation, this would be "istio=ingress"
   selector:
     istio: bookinfo-ingressgateway # use istio default controller
-  servers:
+  servers: 
   - port:
       #number: 8443
       number: 443
       name: https
       protocol: HTTPS
     hosts:
-    - "bookinfo.apps.${CLUSTER_BASE_DOMAIN}"
+    - "*"
     tls:
       mode: SIMPLE # enables HTTPS on this port
       credentialName: ingress-gateway-tls # fetches certs from Kubernetes secret
