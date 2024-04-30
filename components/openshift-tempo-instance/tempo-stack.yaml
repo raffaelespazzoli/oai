@@ -21,6 +21,6 @@ spec:
             termination: edge
           type: route
           host: tempo.apps.${CLUSTER_BASE_DOMAIN}
-        monitoringTab:
+        monitorTab:
           enabled: true
           prometheusEndpoint: https://thanos-querier.openshift-monitoring.svc.cluster.local:9091                  
