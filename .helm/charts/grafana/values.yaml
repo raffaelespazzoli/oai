@@ -1,2 +1,5 @@
 grafana:
   token:
+
+route:
+  host: ~  

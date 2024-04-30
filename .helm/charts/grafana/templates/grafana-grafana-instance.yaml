@@ -20,6 +20,9 @@ spec:
         serviceaccounts.openshift.io/oauth-redirectreference.primary: '{"kind":"OAuthRedirectReference","apiVersion":"v1","reference":{"kind":"Route","name":"grafana-instance-route"}}'
   route:
     spec:
+      {{- if .Values.route.host }}
+      host: {{.Values.route.host }}
+      {{- end }}
       port:
         targetPort: https
       tls:

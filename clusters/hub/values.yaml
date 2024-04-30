@@ -189,23 +189,23 @@ applications:
     source:
       path: components/user-workload-monitoring
 
-  grafana-operator:
+  openshift-grafana-operator:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '5'
     destination:
       namespace: openshift-grafana-operator
     source:
-      path: components/grafana-operator
+      path: components/openshift-grafana-operator
 
-  grafana-user-workload:
+  user-workload-grafana-instance:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '15'
     destination:
-      namespace: istio-system      
+      namespace: openshift-user-workload-grafana-instance     
     source:
-      path: components/grafana-user-workload
+      path: components/user-workload-grafana-instance
 
   minio-operator:
     annotations:
