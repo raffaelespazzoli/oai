@@ -171,16 +171,16 @@ applications:
     destination:
       namespace: openshift-tempo-operator
     source:
-      path: components/tempo-operator
+      path: components/openshift-tempo-operator
 
-  tempo-stack:
+  openshift-tempo-instance:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '15'
     destination:
-      namespace: tempo-stack
+      namespace: openshift-tempo-instance
     source:
-      path: components/tempo-stack
+      path: components/openshift-tempo-instance
 
   user-workload-monitoring:
     annotations:
