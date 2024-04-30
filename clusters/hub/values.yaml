@@ -164,7 +164,7 @@ applications:
 
 # Observability           
 
-  tempo-operator:
+  openshift-tempo-operator:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '5'

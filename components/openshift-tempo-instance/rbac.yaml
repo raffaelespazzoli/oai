@@ -9,4 +9,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: tempo-sa
-  namespace: tempo-stack
+  namespace: openshift-tempo-instance
