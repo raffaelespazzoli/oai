@@ -18,7 +18,7 @@ spec:
   limits:
     global: 
       retention: 
-        days: 2
+        days: 1
       ingestion:
         ingestionBurstSize: 40
         ingestionRate: 20
