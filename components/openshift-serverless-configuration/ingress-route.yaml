@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: knative
+  namespace: knative-serving
+spec:
+  host: a.serverless.apps.${CLUSTER_BASE_DOMAIN}
+  to:
+    kind: Service
+    name: knative-ingress-gateway
+    weight: 100
+  port:
+    targetPort: https
+  tls:
+    termination: reencrypt
+  wildcardPolicy: Subdomain
