@@ -4,6 +4,7 @@ namespace: istio-system
 
 resources:
   - ./telemetry.yaml  
+  - ./tempo-destination-rule.yaml
 
 helmGlobals:
   chartHome: ../../.helm/charts
