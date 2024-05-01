@@ -104,7 +104,7 @@ applications:
     source:
       path: components/openshift-serverless-configuration  
 
-# OpenShiftt pipelines           
+# OpenShift pipelines           
 
   openshift-pipelines:
     annotations:
