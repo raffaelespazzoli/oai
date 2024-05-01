@@ -5,4 +5,4 @@ namespace: serverless-test
 resources:
   - ./namespace.yaml
   - ./test-service.yaml
-  - ./domain-mapping.yaml
+  #- ./domain-mapping.yaml
