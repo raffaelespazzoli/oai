@@ -10,7 +10,9 @@ spec:
     metadata:
       annotations:
         sidecar.istio.io/inject: "true" 
-        sidecar.istio.io/rewriteAppHTTPProbers: "true"  
+        sidecar.istio.io/rewriteAppHTTPProbers: "true"
+      labels:
+        serverless-serving-ingress: "true"    
     spec:
       containers:
         - image: quay.io/openshift-knative/showcase
