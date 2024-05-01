@@ -12,12 +12,12 @@ spec:
         # zipkin:
         #   service: tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
         #   port: 9411
-        # opentelemetry:
-        #   service: tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
-        #   port: 4318
-        envoyOtelAls:
+        opentelemetry:
           service: tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
-          port: 4317          
+          port: 4318
+        # envoyOtelAls:
+        #   service: tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
+        #   port: 4317          
   tracing:
     sampling: 10000
     type: None
