@@ -1,9 +1,15 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: showcase 
+  name: showcase
+  annotations:
+    serving.knative.openshift.io/enablePassthrough: "true"   
 spec:
   template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "true" 
+        sidecar.istio.io/rewriteAppHTTPProbers: "true"  
     spec:
       containers:
         - image: quay.io/openshift-knative/showcase
