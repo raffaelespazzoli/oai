@@ -1,7 +1,7 @@
 apiVersion: serving.knative.dev/v1alpha1
 kind: DomainMapping
 metadata:
- name: serverless.apps.${CLUSTER_BASE_DOMAIN}
+ name: showcase.serverless.apps.${CLUSTER_BASE_DOMAIN}
 spec:
  ref:
    name: showcase
