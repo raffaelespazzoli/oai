@@ -3,7 +3,8 @@ kind: Service
 metadata:
   name: showcase
   annotations:
-    serving.knative.openshift.io/enablePassthrough: "true"   
+    serving.knative.openshift.io/enablePassthrough: "true"
+    serving.knative.openshift.io/disableRoute: "true"
 spec:
   template:
     metadata:
