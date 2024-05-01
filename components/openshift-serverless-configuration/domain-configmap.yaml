@@ -4,6 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: Delete=false,ServerSideApply=true
   name: config-domain
+  namespace: knative-serving
 data:
   serverless.apps.${CLUSTER_BASE_DOMAIN}: | 
     selector:
