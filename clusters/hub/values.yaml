@@ -63,28 +63,28 @@ applications:
 
 # OpenShift AI
 
-  # openshift-ai:
-  #   annotations:
-  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  #     argocd.argoproj.io/sync-wave: '5'
-  #   destination:
-  #     namespace: redhat-ods-operator
-  #   source:
-  #     path: components/openshift-ai
+  openshift-ai:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: redhat-ods-operator
+    source:
+      path: components/openshift-ai
 
-  # data-science-cluster:
-  #   annotations:
-  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  #     argocd.argoproj.io/sync-wave: '15'
-  #   source:
-  #     path: components/data-science-cluster   
+  data-science-cluster:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '15'
+    source:
+      path: components/data-science-cluster   
 
-  # data-science-cluster-configuration:
-  #   annotations:
-  #     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  #     argocd.argoproj.io/sync-wave: '25'
-  #   source:
-  #     path: components/data-science-cluster-configuration         
+  data-science-cluster-configuration:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '25'
+    source:
+      path: components/data-science-cluster-configuration         
 
 # OpenShift Serverless
 
