@@ -32,7 +32,7 @@ spec:
     istio: knative-ingress-gateway # use istio default controller 
   servers:
     - port:
-        number: 8081
+        number: 80
         name: https
         protocol: HTTPS 
       tls:
