@@ -7,6 +7,9 @@ spec:
   mode: ClusterWide
   # Configuring the distributed tracing platform (Tempo)
   meshConfig:
+    discoverySelectors:
+      - matchLabels:
+          servicemesh: "true"  
     extensionProviders:
       - name: tempo
         # zipkin:
