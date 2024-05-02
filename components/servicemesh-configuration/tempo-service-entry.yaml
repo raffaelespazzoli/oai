@@ -7,7 +7,7 @@ spec:
   - tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
   location: MESH_EXTERNAL
   ports:
-  - number: 9411
+  - number: 4318
     name: http
-    protocol: TCP
+    protocol: HTTP
   resolution: DNS
