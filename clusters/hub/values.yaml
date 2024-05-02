@@ -88,7 +88,13 @@ applications:
     destination:
       namespace: cert-manager
     source:
-      path: components/cert-manager-configuration      
+      path: components/cert-manager-configuration
+    extraFields: |
+      ignoreDifferences:
+        - group: 'cert-manager.io'
+          jsonPointers:
+            - /spec/acme/solvers
+          kind: ClusterIssuer            
 
 # OpenShift AI
 
