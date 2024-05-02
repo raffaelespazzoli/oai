@@ -3,6 +3,9 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: knative
   namespace: knative-serving
+  annotations:
+    cert-utils-operator.redhat-cop.io/certs-from-secret: "serveless-ingress-cert-tls"
+    cert-utils-operator.redhat-cop.io/inject-CA: "false"
 spec:
   host: a.serverless.apps.${CLUSTER_BASE_DOMAIN}
   to:
