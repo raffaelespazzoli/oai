@@ -10,5 +10,4 @@ helmCharts:
   - name: reflector
     repo: https://emberstack.github.io/helm-charts
     releaseName: reflector-operator
-    namespace: reflector-operator
-    valuesFile: values.yaml    
+    namespace: reflector-operator    
