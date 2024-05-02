@@ -12,15 +12,12 @@ spec:
           servicemesh: "true"  
     extensionProviders:
       - name: tempo
-        # zipkin:
-        #   service: tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
-        #   port: 9411
-        opentelemetry:
+        zipkin:
           service: tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
-          port: 4318
-        # envoyOtelAls:
+          port: 9411
+        # opentelemetry:
         #   service: tempo-tempo-distributor.openshift-tempo-instance.svc.cluster.local
-        #   port: 4317          
+        #   port: 4318          
   tracing:
     sampling: 10000
     type: None
