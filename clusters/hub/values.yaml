@@ -72,15 +72,6 @@ applications:
 
 # cert manager
 
-  cert-manager-operator:
-    annotations:
-      argocd.argoproj.io/compare-options: IgnoreExtraneous
-      argocd.argoproj.io/sync-wave: '5'
-    destination:
-      namespace: cert-manager
-    source:
-      path: components/cert-manager-operator
-
   cert-utils-operator:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
