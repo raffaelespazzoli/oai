@@ -3,7 +3,8 @@ kind: Kustomization
 namespace: reflector-operator
 
 resources:
-  - ./rbac.yaml  
+  - ./rbac.yaml
+  - ./namespace.yaml  
 
 
 helmCharts:
