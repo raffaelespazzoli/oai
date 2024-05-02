@@ -5,4 +5,15 @@ resources:
   - ./hf_tgi-serving-template.yaml
   - ./ollama-serving-template.yaml
   - ./vllm-serving-template.yaml
-  - ./accelerator-profile.yaml  
+  - ./accelerator-profile.yaml
+  - ./dsc-tenant-route.yaml
+  - ./dsc-tenant-secret.yaml
+  - ./rbac.yaml  
+
+
+helmCharts:
+  - name: tenant
+    repo: https://operator.min.io
+    releaseName: dsc
+    namespace: redhat-ods-applications
+    valuesFile: values.yaml   

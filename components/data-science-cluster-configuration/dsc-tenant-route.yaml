@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: dsc-tenant
+  namespace: redhat-ods-applications
+spec:
+  to:
+    kind: Service
+    name: dsc-console
+    weight: 100
+  port:
+    targetPort: http-console
+  tls:
+    termination: edge
+  wildcardPolicy: None
