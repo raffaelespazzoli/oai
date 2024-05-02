@@ -9,6 +9,6 @@ spec:
   ports:
   - number: 4317
     # number: 9411
-    name: http
-    protocol: HTTP
+    name: otlp-grpc
+    protocol: GRPC
   resolution: DNS
