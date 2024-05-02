@@ -16,7 +16,7 @@ metadata:
     app.opendatahub.io/rhods-dashboard: "true"
     opendatahub.io/dashboard: "true"
     opendatahub.io/ootb: "true"
-  name: ollama-serving-template
+  name: hf_tgi-serving-template
   namespace: redhat-ods-applications
 objects:
 - apiVersion: serving.kserve.io/v1alpha1
