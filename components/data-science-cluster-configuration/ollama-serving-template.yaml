@@ -1,0 +1,50 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+metadata:
+  annotations:
+    description: Ollama serving model.
+    opendatahub.io/apiProtocol: REST
+    opendatahub.io/modelServingSupport: '["single"]'
+    openshift.io/provider-display-name: Openshift AI BU.
+    tags: rhods,rhoai,kserve,servingruntime
+    template.openshift.io/long-description: This template defines resources needed
+      to deploy ollama servingruntime with Red Hat Data Science KServe
+      for LLM model
+  labels:
+    app: odh-dashboard
+    app.kubernetes.io/part-of: rhods-dashboard
+    app.opendatahub.io/rhods-dashboard: "true"
+    opendatahub.io/dashboard: "true"
+    opendatahub.io/ootb: "true"
+  name: ollama-serving-template
+  namespace: redhat-ods-applications
+objects:
+- apiVersion: serving.kserve.io/v1alpha1
+  kind: ServingRuntime
+  metadata:
+    labels:
+      opendatahub.io/dashboard: "true"
+    annotations:
+      openshift.io/display-name: Ollama
+    name: ollama
+  spec:
+    builtInAdapter:
+      modelLoadingTimeoutMillis: 90000
+    containers:
+      - image: quay.io/rh-aiservices-bu/ollama-ubi9:0.1.30
+        env:
+          - name: OLLAMA_MODELS
+            value: /.ollama/models
+          - name: OLLAMA_HOST
+            value: 0.0.0.0
+          - name: OLLAMA_KEEP_ALIVE
+            value: '-1m'
+        name: kserve-container
+        ports:
+          - containerPort: 11434
+            name: http1
+            protocol: TCP
+    multiModel: false
+    supportedModelFormats:
+      - autoSelect: true
+        name: any
