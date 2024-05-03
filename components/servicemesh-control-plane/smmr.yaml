@@ -8,7 +8,8 @@ spec:
     - knative-eventing
     - knative-serving
     - serverless-test
-# I have to confgiure the members this way because of: https://issues.redhat.com/browse/RHOAIENG-6711      
+    - inference-service-test
+# I have to configure the members this way because of: https://issues.redhat.com/browse/RHOAIENG-6711      
   # memberSelectors: 
   #   - matchLabels:
   #       servicemesh: "true"
