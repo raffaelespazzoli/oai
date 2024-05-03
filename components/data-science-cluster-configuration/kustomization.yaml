@@ -9,7 +9,8 @@ resources:
   - ./accelerator-profile.yaml
   - ./dsc-tenant-route.yaml
   - ./dsc-tenant-secret.yaml
-  - ./rbac.yaml  
+  - ./rbac.yaml
+  - ./network-policy.yaml  
 
 
 helmCharts:
