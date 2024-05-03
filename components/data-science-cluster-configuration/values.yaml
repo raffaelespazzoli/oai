@@ -1,0 +1,19 @@
+secrets:
+  name: dsc-env-configuration
+  accessKey: dsc 
+  secretKey: dscdscdsc
+tenant:
+  configuration:
+    name: dsc-env-configuration
+  name: dsc  
+  pools:
+    - name: pool-0
+      servers: 1
+      storageClassName: gp3-csi
+  buckets:
+    - name: dsc
+      objectLock: false
+  certificate:    
+    requestAutoCert: false         
+
+                        
