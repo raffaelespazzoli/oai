@@ -15,7 +15,7 @@ spec:
           namespace: {{ .Name }}
           labels:
             opendatahub.io/dashboard: 'true'
-            opendatahub.io/managed: 'false'
+            opendatahub.io/managed: 'true'
           annotations:
             reflector.v1.k8s.emberstack.com/reflects: "redhat-ods-applications/dsc-tenant-s3"  
             opendatahub.io/connection-type: s3

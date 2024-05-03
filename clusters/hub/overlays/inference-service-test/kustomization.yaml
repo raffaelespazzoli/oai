@@ -4,3 +4,5 @@ namespace: inference-service-test
 
 resources:
   - ./namespace.yaml
+  - ./inference-service.yaml
+  - ./service-runtime.yaml
