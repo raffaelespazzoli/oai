@@ -12,6 +12,7 @@ spec:
         kind: Secret
         metadata:
           name: dsc-tenant-s3
+          namespace: {{ .Name }}
           labels:
             opendatahub.io/dashboard: 'true'
             opendatahub.io/managed: 'false'
