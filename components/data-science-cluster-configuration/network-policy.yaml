@@ -9,6 +9,9 @@ spec:
     - namespaceSelector:
         matchLabels:
           network.openshift.io/policy-group: ingress
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: openshift-minio-operator
   podSelector:
     matchLabels:
       app: minio
