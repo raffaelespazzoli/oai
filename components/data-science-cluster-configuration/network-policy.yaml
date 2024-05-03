@@ -2,13 +2,13 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: dsc-tenant-ui-access
-  namespace: {{ .Name }}
+  namespace: redhat-ods-applications
 spec:
   ingress:
   - from:
     - namespaceSelector:
         matchLabels:
-          network.openshift.io/policy-group: monitoring
+          network.openshift.io/policy-group: ingress
   podSelector:
     matchLabels:
       app: minio
