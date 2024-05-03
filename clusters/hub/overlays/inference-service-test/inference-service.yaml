@@ -4,9 +4,9 @@ metadata:
   annotations:
     openshift.io/display-name: test
     serving.knative.openshift.io/enablePassthrough: 'true'
+    serving.knative.openshift.io/disableRoute: "true"
     sidecar.istio.io/inject: 'true'
     sidecar.istio.io/rewriteAppHTTPProbers: 'true'
-  resourceVersion: '3737861'
   name: test
   labels:
     opendatahub.io/dashboard: 'true'
