@@ -23,3 +23,4 @@ crome https://user-workload-grafana.apps.${cluster_base_domain}/d/UbsSZTDik/isti
 ```
 
 verify that traces were collected
+
